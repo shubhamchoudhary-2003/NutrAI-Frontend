@@ -10,7 +10,7 @@ const SearchBar: React.FC = () => {
       <form className={`relative w-80 h-10 rounded-full shadow-lg bg-white transition-all ease-in-out duration-300 ${focused ? 'shadow-sm' : ''}`}>
         <input
           type="search"
-          placeholder="Search"
+          placeholder="Deep Search"
           className="absolute top-2.5 left-9 w-52 bg-transparent text-gray-600 text-sm outline-none"
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
@@ -21,54 +21,21 @@ const SearchBar: React.FC = () => {
           </svg>
         </button>
         <div className="absolute top-2.5 right-4 flex space-x-1">
-          <div className="relative group">
-            <input type="radio" name="type" value="type-users" id="type-users" className="absolute opacity-0 w-full h-full cursor-pointer" />
-            <label htmlFor="type-users" className="cursor-pointer">
-              <svg className="h-5 w-5 fill-gray-600 opacity-60 transition-all ease-in-out pointer-events-none">
-                <use xlinkHref="#user" />
-              </svg>
-            </label>
-            <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 opacity-0 bg-gray-500 text-white text-xs uppercase px-2 py-1 rounded-md group-hover:opacity-100 transition-all ease-in-out">
-              Users
-              <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-0.5 w-0 h-0 border-t-4 border-t-gray-500 border-l-4 border-l-transparent border-r-4 border-r-transparent"></span>
-            </span>
-          </div>
-          <div className="relative group">
-            <input type="radio" name="type" value="type-posts" id="type-posts" className="absolute opacity-0 w-full h-full cursor-pointer" />
-            <label htmlFor="type-posts" className="cursor-pointer">
-              <svg className="h-5 w-5 fill-gray-600 opacity-60 transition-all ease-in-out pointer-events-none">
-                <use xlinkHref="#post" />
-              </svg>
-            </label>
-            <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 opacity-0 bg-gray-500 text-white text-xs uppercase px-2 py-1 rounded-md group-hover:opacity-100 transition-all ease-in-out">
-              Posts
-              <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-0.5 w-0 h-0 border-t-4 border-t-gray-500 border-l-4 border-l-transparent border-r-4 border-r-transparent"></span>
-            </span>
-          </div>
+        
+          
           <div className="relative group">
             <input type="radio" name="type" value="type-images" id="type-images" className="absolute opacity-0 w-full h-full cursor-pointer" />
             <label htmlFor="type-images" className="cursor-pointer">
-              <svg className="h-5 w-5 fill-gray-600 opacity-60 transition-all ease-in-out pointer-events-none">
-                <use xlinkHref="#images" />
-              </svg>
+              <img src="/sparle.png" className="h-5 w-5 fill-gray-600 opacity-50 transition-all ease-in-out pointer-events-none">
+                
+              </img>
             </label>
             <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 opacity-0 bg-gray-500 text-white text-xs uppercase px-2 py-1 rounded-md group-hover:opacity-100 transition-all ease-in-out">
-              Images
+              ai
               <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-0.5 w-0 h-0 border-t-4 border-t-gray-500 border-l-4 border-l-transparent border-r-4 border-r-transparent"></span>
             </span>
           </div>
-          <div className="relative group">
-            <input type="radio" name="type" value="type-special" id="type-special" defaultChecked className="absolute opacity-0 w-full h-full cursor-pointer" />
-            <label htmlFor="type-special" className="cursor-pointer">
-              <svg className="h-5 w-5 fill-red-500 opacity-90 transition-all ease-in-out pointer-events-none">
-                <use xlinkHref="#special" />
-              </svg>
-            </label>
-            <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 opacity-0 bg-red-500 text-white text-xs uppercase px-2 py-1 rounded-md group-hover:opacity-100 transition-all ease-in-out">
-              Special
-              <span className="absolute left-1/2 transform -translate-x-1/2 -bottom-0.5 w-0 h-0 border-t-4 border-t-red-500 border-l-4 border-l-transparent border-r-4 border-r-transparent"></span>
-            </span>
-          </div>
+          
         </div>
       </form>
 

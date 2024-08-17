@@ -10,7 +10,7 @@ export function ImageInput() {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center max-w-4xl mx-auto min-h-96 border border-dashed bg-white powr:bg-black border-neutral-200 powr:border-neutral-800 rounded-lg p-8">
+    <div className="w-full flex flex-col justify-center max-w-4xl mx-auto min-h-96 bg-white powr:bg-black border-neutral-200 powr:border-neutral-800 rounded-lg p-8">
       <div className="flex flex-col items-center justify-center space-y-4">
         <p className="relative z-20 font-sans font-extrabold text-neutral-700 powr:text-neutral-300 text-xl">
           Upload File

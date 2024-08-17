@@ -10,8 +10,8 @@ const mainVariant = {
     y: 0,
   },
   animate: {
-    x: 20,
-    y: -20,
+    x: 0,
+    y: -10,
     opacity: 0.9,
   },
 };
@@ -153,7 +153,7 @@ export const FileUpload = ({
             {!files.length && (
               <motion.div
                 variants={secondaryVariant}
-                className="absolute opacity-0 border border-dashed border-sky-400 inset-0 z-30 bg-transparent flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md"
+                className="absolute opacity-0 inset-0 z-30 bg-transparent flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md"
               ></motion.div>
             )}
           </div>
