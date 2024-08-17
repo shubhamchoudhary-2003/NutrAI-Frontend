@@ -2,3 +2,67 @@
 @tailwind components;
 @tailwind utilities;
   
+
+.loader {
+    @apply w-fit h-fit flex items-center justify-center;
+  }
+  
+  .truckWrapper {
+    @apply w-[200px] h-[100px] flex flex-col relative items-center justify-end overflow-hidden;
+  }
+  
+  .truckBody {
+    @apply w-[130px] h-fit mb-[6px] animate-[motion_1s_linear_infinite];
+  }
+  
+  @keyframes motion {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(3px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .truckTires {
+    @apply w-[130px] h-fit flex items-center justify-between px-[10px] pb-0 absolute bottom-0;
+  }
+  
+  .truckTires svg {
+    @apply w-6;
+  }
+  
+  .road {
+    @apply w-full h-[1.5px] bg-[#282828] relative bottom-0 self-end rounded-[3px];
+  }
+  
+  .road::before,
+  .road::after {
+    content: "";
+    @apply absolute h-full bg-[#282828] rounded-[3px] animate-[roadAnimation_1.4s_linear_infinite];
+  }
+  
+  .road::before {
+    @apply w-[20px] right-[-50%] border-l-[10px] border-solid border-white;
+  }
+  
+  .road::after {
+    @apply w-[10px] right-[-65%] border-l-[4px] border-solid border-white;
+  }
+  
+  .lampPost {
+    @apply absolute bottom-0 right-[-90%] h-[90px] animate-[roadAnimation_1.4s_linear_infinite];
+  }
+  
+  @keyframes roadAnimation {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(-350px);
+    }
+  }
+  
