@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    const response = await fetch("https://nutrai-searcher-api-test.onrender.com/upload", {
+    const response = await fetch("http://127.0.0.1:8000/upload", {
       method: "POST",
       body: formData,
     });
